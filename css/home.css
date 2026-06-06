@@ -208,13 +208,17 @@
 }
 
 .btn-primary:hover {
-    background-color: rgba(0, 212, 255, 0.8);
+    background-color: #00a8cc;
 }
 
 .hero .btn-primary {
     display: inline-flex !important;
     background-color: var(--neon-blue) !important;
     color: var(--background) !important;
+}
+
+.hero .btn-primary:hover {
+    background-color: #00a8cc !important;
 }
 
 .btn-icon {
