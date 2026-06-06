@@ -142,3 +142,47 @@
     font-size: 2rem;
     cursor: pointer;
 }
+
+
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-copyright {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.social-link {
+    color: var(--muted-foreground);
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-link:hover {
+    color: var(--neon-blue);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
