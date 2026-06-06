@@ -1,4 +1,122 @@
 :root {
     --font-size: 16px;
     --background: #0A0A0F;
+    --foreground: #ffffff;
+    --surface: #14141A;
+    --neon-blue: #00D4FF;
+    --neon-magenta: #FF44CC;
+    --card: #14141A;
+    --card-foreground: #ffffff;
+    --border: rgba(255,255,255, 0.01);
+    --radius: 0.75rem;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 0 1.5rem;
+    }
+
+    h1{
+        font-size: 2rem;
+
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--neon-blue);
+        color: var(--background);
+        padding: 1rem 2rem;
+        border-radius: 0.75rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover{
+        background-color: rgba(0, 212, 255, 0.9);
+        gap: 0.75rem;
+    }
+
+    .btn-secondary{
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: transparent;
+        color: var(--foreground);
+        padding: 1rem 2rem;
+        font-weight: 500;
+        border: 1px solid var(--border);
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .btn-secondary:hover{
+        border-color: var(--neon-blue);
+        color: var(--neon-blue);
+    }
+    
 }
