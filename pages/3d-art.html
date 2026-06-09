@@ -3,10 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Art</title>
+    <title>3D Art | Unathi Shibe</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/dark-theme.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/art.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 </head>
 <body>
+
+    <div id="nav-container"></div>
+
+    <main>
+        <div class="art-container">
+            <h1 class="art-title">3D Art</h1>
+
+           <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="sculpture">Sculpture</button>
+                    <button class="filter-btn" data-filter="hard-surface">Hard Surface</button>
+           </div>
+
+           <div class="projects-container" id="projectsContainer">
+            <div class="project-item" data-category="sculpture" id="head-sculpt">
+                <div class="project-card">
+                    <h2 class="project-title">Head Sculpt</h2>
+
+                    <div class="image-gallery">
+                        <div class="gallery-grid" data-project="head-sculpt">
+                            <div class="gallery-image" data-img-index="0">
+                                <img src="/assets/images/head-sculpt/head render.jpg" alt="Head Sculpt - View 1">
+                            </div>
+
+                            <div class="gallery-image" data-img-index="1">
+                                <img src="/assets/images/head-sculpt/head cross.jpg" alt="">
+                            </div>
+                            <div class="gallery-image" data-img-index="2">
+                                <img src="/assets/images/head-sculpt/head neck tattoo.jpg" alt="">
+                            </div>
+                            <div class="gallery-image" data-img-index="3">
+                                <img src="/assets/images/head-sculpt/head viewport shader.jpg" alt="">
+                            </div>
+                            <div class="gallery-image" data-img-index="4">
+                                <img src="/assets/images/head-sculpt/head wireframes.jpg" alt="">
+                            </div>
+                            <div class="gallery-image" data-img-index="5">
+                                <img src="/assets/images/head-sculpt/head xoxo.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="turnable-preview">
+                        <p>Turnable Animation (Click to view full video)</p>
+                    </div>
+
+                    <div class="tools-section">
+                        <div class="tools-list">
+                            <span class="tool-tag">Blender</span>
+                            <span class="tool-tag">PureRef</span>
+                            <span class="tool-tag">Photoshop</span>
+                        </div>
+                    </div>
+
+                    <div class="statement-section">
+                        <h3 class="section-subtitle">Artist Statement</h3>
+                        <p class="statement-text">
+                            This piece explores themes of alienation and identity in digital spaces. 
+                            Inpired by Alberto Mielgo's distinctive style, I focused on creatng expressive features that
+                            convey emotion through subtle asymmetry and carefully considered proportions. The scupting process 
+                            allowed me to explore the boundary between realism and stylization.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project-item" data-category="hard-surface" id="industrial-table">
+
+                <div class="project-card">
+                    <h2 class="project-title">Industrial Drawing Table</h2>
+                     
+                    <div class="image-gallery">
+                        <div class="gallery-grid" data-project="industrial-table">
+                            <div class="gallery-image" data-img-index="0">
+                                <img src="/assets/images/industrial-drawing-table/caa50b80-d30c-4923-8934-da1fc52ce6ab.JPEG" alt="Industrial Drawing Table - View 1">
+                                
+                            </div>
+                            <div class="gallery-image" data-img-index="1">
+                                <img src="/assets/images/industrial-drawing-table/WhatsApp Image 2026-06-06 at 14.11.44 (1).jpeg" alt="Industrial Drawing Table - View 2">
+
+                            </div>
+                            <div class="gallery-image" data-img-index="2">
+                                <img src="/assets/images/industrial-drawing-table/WhatsApp Image 2026-06-06 at 14.11.44.jpeg" alt="Industrial Drawing Table - View 3">
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="turnable-preview">
+                        <p>Turnable Animation (Click to view full video)</p>
+                    </div>
+
+                    <div class="tools-section">
+                        <h3 class="section-subtitle">Tools Used</h3>
+                        <div class="tools-list">
+                            <span class="tool-tag">Blender</span>
+                            <span class="tool-tag">Photoshop</span>
+                            <span class="tool-tag">PureRef</span>
+                        </div>
+                    </div>
+
+                    <div class="statement-section">
+                        <h3 class="section-subtitle">Artist Statement</h3>
+                        <p class="statement-text">
+                            This hard surface model showcases procedural texturing techniques and clean topology
+                            for mechanical objects. I focused on creating realistic wear and tear through layered
+                            materials, while maintaining optimal edge flow for potential animation or game use. The
+                            project deepened my understanding of non-destructive modeling workflows and PBR material
+                            creation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </main>
+
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times</span>
+            <button class="modal-prev">❮</button>
+            <img src="" alt="" class="modal-image" id="modalImage">
+            <button class="modal-next">❯</button>
+        </div>
+    </div>
     
+
+    <!-- Scripts -->
+    <script src="/javascript/nav.js"></script>
+    <script src="/javascript/mobile-menu.js"></script>
+    <script src="/javascript/project-filter.js"></script>
 </body>
 
 </html>
