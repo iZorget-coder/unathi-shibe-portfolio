@@ -24,6 +24,15 @@
     gap: 3rem;
 }
 
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+.contact-card {
+    margin-top: 3rem;
+}
 .bio-card,
 .skills-card,
 .contact-card {
