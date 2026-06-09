@@ -9,6 +9,15 @@ if(mobileMenuBtn && navLinks) {
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', ()=>{
             navLinks.classList.remove('active');
-        })
-    })
+        });
+    });
+
+    document.addEventListener('click', function(event){
+        const isClickInsideNav = navLinks.contains(event.target);
+        const isClickOnMenuBtn = mobileMenuBtn.contains(event.target);
+
+        if(!isClickInsideNav && !isClickOnMenuBtn && navLinks.classList.contains('active')){
+            navLinks.classList.remove('active');
+        }
+    });
 }
