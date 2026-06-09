@@ -96,12 +96,21 @@ gap: 0.5rem;
 }
 
 .skill-tag-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.5rem 1rem;
     background-color: #0a0a0f;
     border: 1px solid var(--border);
     border-radius: 9999px;
     font-size: 0.875rem;
     transition: all 0.2s ease;
+}
+
+.skill-tag-category img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
 }
 
 .skill-tag-category:hover{

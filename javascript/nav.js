@@ -3,7 +3,7 @@ document.getElementById('nav-container').innerHTML =
     <nav class="main-nav">
         <div class="nav-container">
             <div class="nav-portfolio-name">
-                <a href="/index.html" class="logo">Unathi Shibe</a>
+                <a href="/pages/index.html" class="logo">Unathi Shibe</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             <ul class="nav-links" id="navLinks">
