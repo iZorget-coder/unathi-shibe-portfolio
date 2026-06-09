@@ -1,0 +1,237 @@
+.about-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+.about-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+@media (min-width: 768px){
+    .about-title {
+        font-size: 3rem;
+    }
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.bio-card,
+.skills-card,
+.contact-card {
+    background-color: var(--surface);
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    padding: 2rem;
+}
+
+@media (min-width: 768px){
+    .bio-card,
+    .skills-card,
+    .contact-card{
+        padding: 2.5rem;
+    }
+}
+
+.bio-title, 
+.skills-title,
+.contact-title{
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.bio-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.highlight-magenta{
+    color: var(--neon-magenta);
+    font-weight: 500;
+}
+
+.skills-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skills-categories h3{
+    font-size: 1rem;
+    color: var(--neon-blue);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.category-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+
+.category-tags{
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+}
+
+.skill-tag-category {
+    padding: 0.5rem 1rem;
+    background-color: #0a0a0f;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.skill-tag-category:hover{
+    border-color: var(--neon-blue);
+
+}
+
+.contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.form-group label{
+ font-width: 500;
+}
+
+.required{
+    color: var(--neon-magenta);
+
+}
+
+.form-group input,
+.form-group textarea{
+    padding: 0.75rem 1rem;
+    background-color: #0A0A0F;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.25);
+
+}
+
+.form-group input.error,
+.form-group textarea.error{
+    border-color: #d4183d;
+}
+
+.error-message.show {
+    display: block;
+
+}
+
+.submit-btn{
+    padding: 1rem;
+    background-color: #0A0A0F;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: rgba(255,255,255, 0.4);
+    font-weight: 500;
+    cursor: not-allowed;
+    transition: all 0.2s ease;
+}
+
+
+.submit-btn.active{
+    background-color: var(--neon-blue);
+    color: #0A0A0F;
+    cursor: pointer;
+}
+
+.submit-btn.active:hover{
+    background-color: #00a8cc;
+}
+
+.social-section{
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.social-title{
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.social-link-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s ease;
+}
+
+.social-link-icon:hover{
+    color: var(--neon-blue);
+
+}
+.social-icon-circle{
+    padding: 0.75rem;
+    background-color: #0A0A0F;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease;
+}
+
+.social-link-icon:hover .social-icon-circle{
+    border-color: var(--neon-blue);
+}
+
+.social-icon-circle img{
+    width: 24px;
+    height: 24px;
+}
+
+.social-icon-icon span{
+    font-size: 0.75rem;
+}
