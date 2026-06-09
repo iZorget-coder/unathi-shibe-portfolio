@@ -112,7 +112,9 @@
     max-width: 1400px;
     margin: 0 auto;
 }
-
+.skill-tag:hover img {
+    filter: none;
+}
 .cta-section {
     padding: 4rem 2rem;
 }

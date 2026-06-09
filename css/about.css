@@ -115,7 +115,7 @@ gap: 0.5rem;
 
 .skill-tag-category:hover{
     border-color: var(--neon-blue);
-
+    color: var(--neon-blue);
 }
 
 .contact-form{
