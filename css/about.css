@@ -184,7 +184,10 @@ gap: 0.5rem;
 .submit-btn.active:hover{
     background-color: #00a8cc;
 }
-
+.highlight-blue{
+color: var(--neon-blue);
+font-weight: 500;
+}
 .social-section{
     border-top: 1px solid var(--border);
     padding-top: 2rem;
