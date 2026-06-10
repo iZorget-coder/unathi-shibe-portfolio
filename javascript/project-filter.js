@@ -9,6 +9,8 @@ filterBtns.forEach(btn => {
         const filterValue = btn.getAttribute('data-filter');
 
         projectItems.forEach(item => {
+
+            //Display/hide based on category match instead of rebuilding DOM
             if (filterValue === 'all') {
                 item.style.display = 'block';
             } else {

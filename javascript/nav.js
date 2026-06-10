@@ -16,6 +16,9 @@ document.getElementById('nav-container').innerHTML =
     </nav>
 `;
 
+
+//Avoiding duplicated static HTML across pages
+
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-link').forEach(link => {
     if (link.getAttribute('href').includes(currentPage)) {

@@ -256,3 +256,12 @@ font-weight: 500;
 .social-icon-icon span{
     font-size: 0.75rem;
 }
+
+.form-status.success {
+    color: var(--neon-blue);
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 0.5rem;
+}

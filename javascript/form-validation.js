@@ -92,6 +92,7 @@ function handleInput(e) {
         touched: formState[fieldName].touched
     };
 
+    //Only show errors after user has interacted to avoid aggressive validation
     if (formState[fieldName].touched) {
         if (!isValid) {
             showError(e.target, document.getElementById(`${fieldName}Error`), getErrorMessage(fieldName, value));
@@ -141,7 +142,10 @@ function handleSubmit(e) {
             }
         }).then(response => {
             if (response.ok) {
-                alert('Thank you for your message! I\'ll get back to you soon.');
+               const statusDiv = document.getElementById('formStatus');
+                statusDiv.textContent = 'Message sent! I\'ll get back to you soon.';
+                statusDiv.classList.add('success');
+                submitBtn.disabled = true;
                 form.reset();
                 formState = {
                     name: { value: '', isValid: false, touched: false },
