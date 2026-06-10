@@ -12,6 +12,7 @@ videoThumbnails.forEach(container =>{
             video.controls = true;
             video.autoplay = true;
             video.loop = false;
+            
             video.style.width = '100%';
             video.style.height = '100%';
             video.style.objectFit = 'cover';

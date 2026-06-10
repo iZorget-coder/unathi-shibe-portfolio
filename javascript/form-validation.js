@@ -131,22 +131,31 @@ function handleSubmit(e) {
         formState.message.isValid;
 
     if (allValid) {
-        console.log('Form submitted:', {
-            name: formState.name.value,
-            email: formState.email.value,
-            subject: formState.subject.value,
-            message: formState.message.value
+        const formData = new FormData(form);
+        
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                form.reset();
+                formState = {
+                    name: { value: '', isValid: false, touched: false },
+                    email: { value: '', isValid: false, touched: false },
+                    subject: { value: '', isValid: false, touched: false },
+                    message: { value: '', isValid: false, touched: false }
+                };
+                updateSubmitButton();
+            } else {
+                alert('Oops! Something went wrong. Please try again.');
+            }
+        }).catch(error => {
+            alert('Oops! Something went wrong. Please try again.');
         });
-        alert('Thank you for your message! I\'ll get back to you soon.');
-
-        form.reset();
-        formState = {
-            name: { value: '', isValid: false, touched: false },
-            email: { value: '', isValid: false, touched: false },
-            subject: { value: '', isValid: false, touched: false },
-            message: { value: '', isValid: false, touched: false }
-        };
-        updateSubmitButton();
     }
 }
 
